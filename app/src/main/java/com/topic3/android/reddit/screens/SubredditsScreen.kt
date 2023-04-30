@@ -184,11 +184,14 @@ fun SubredditDescription(modifier: Modifier, @StringRes descriptionStringRes: In
 }
 
 @Composable
-fun Community(text: String, modifier: Modifier = Modifier, onCommunityClicked: () -> Unit = {}) {
-    //TODO add your code here
-    Row( modifier = modifier
+fun Community(
+    text: String,
+    modifier: Modifier = Modifier,
+    onCommunityClicked: () -> Unit = {}
+) {
+    Row(modifier = modifier
         .padding(start = 16.dp, top = 16.dp)
-        .fillMaxSize()
+        .fillMaxWidth()
         .clickable { onCommunityClicked.invoke() }
     ){
         Image(
@@ -206,9 +209,9 @@ fun Community(text: String, modifier: Modifier = Modifier, onCommunityClicked: (
             modifier = modifier
                 .padding(start = 16.dp)
                 .align(Alignment.CenterVertically)
-
         )
     }
+
 }
 
 @Composable
